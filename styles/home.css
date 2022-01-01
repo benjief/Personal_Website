@@ -1,0 +1,25 @@
+/* CSS for homepage */
+
+/* Nav bar styling */
+
+.navbar-brand {
+    font-family: 'Barlow', sans-serif;
+    font-size: 15pt;
+    letter-spacing: 0.1ch;
+}
+
+#first-name {
+    font-weight: 100;
+}
+
+#last-name {
+    font-weight: 700;
+}
+
+.nav-item {
+    font-family: 'Barlow', sans-serif;
+    font-size: 13pt;
+}
+
+
+
