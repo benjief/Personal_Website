@@ -1,11 +1,17 @@
 /* CSS for homepage */
 
 /* Nav bar styling */
+.navbar {
+    background-color: transparent!important;
+    z-index: 1;
+    width: 100%;
+}
 
 .navbar-brand {
     font-family: 'Barlow', sans-serif;
-    font-size: 15pt;
+    font-size: min(max(1rem, 7vw), 21pt);
     letter-spacing: 0.1ch;
+    margin-left: 5px;
 }
 
 #first-name {
@@ -13,13 +19,115 @@
 }
 
 #last-name {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .nav-item {
     font-family: 'Barlow', sans-serif;
-    font-size: 13pt;
+    font-size: min(max(1rem, 2vw), 16pt);
+    align-self: flex-end;
 }
 
+.nav-link {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+/* Parallax Scrolling */
+
+body, html {
+    /* width: 100%; */
+    height: 100%;
+    font-family: 'Barlow', sans-serif;
+}
+
+.page-container {
+    display: grid;
+    grid-template-areas:
+        "section-1";
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+#section-1 {
+    display: grid;
+    grid-area: section-1;
+    grid-template-areas: 
+        "text";
+    grid-template-columns: 100%;
+    align-content: center;
+    justify-content: center;
+    background-image: url('../img/helicopter.JPG');
+    background-attachment: fixed;
+    background-position: 8%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-placeholder {
+    grid-area: text;
+    display: grid;
+    grid-template-areas: 
+        "main-text"
+        "sub-text";
+    font-family: 'Barlow', sans-serif;
+    color: white;
+    letter-spacing: 0.1ch;
+    width: 100%;
+}
+
+#text-1 {
+    grid-template-rows: 65% 35%;
+    height: 100%;
+    position: relative;
+    top: -65px;
+}
+
+@media only screen and (max-width: 375px) {
+    #text-1 {
+        top: -55px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #text-1 {
+        top: -25px;
+    }
+
+    .navbar-toggler-icon {
+        width: 1.1em;
+        height: 1.1em;
+    }
+
+}
+
+.main-text {
+    grid-area: main-text;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: min(max(1rem, 15vw), 90pt);
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.1ch;
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.sub-text {
+    grid-area: sub-text;
+    display: flex;
+    justify-content: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: min(max(1rem, 9vw), 40pt);
+    font-weight: 200;
+    color: white;
+    letter-spacing: 0.1ch;
+    height: 100%;
+    margin-bottom: 0;
+}
 
 
