@@ -2,7 +2,7 @@
 
 /* Nav bar styling */
 .navbar {
-    background-color: transparent!important;
+    background-color: transparent !important;
     z-index: 1;
     width: 100%;
 }
@@ -42,31 +42,55 @@ body, html {
 }
 
 .page-container {
-    display: grid;
-    grid-template-areas:
-        "section-1";
     position: absolute;
     top: 0px;
-    height: 100%;
     width: 100%;
+    height: 100%;
 }
 
-#section-1 {
+.parallex-container {
     display: grid;
+    place-items: center;
+    place-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#parallex-container-1 {
+    grid-template: "section-1";
+}
+
+#parallex-container-1 > .background, .foreground {
     grid-area: section-1;
-    grid-template-areas: 
-        "text";
-    grid-template-columns: 100%;
-    align-content: center;
-    justify-content: center;
-    background-image: url('../img/helicopter.JPG');
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-attachment: fixed;
-    background-position: 8%;
     background-repeat: no-repeat;
     background-size: cover;
+    transform: translateZ(0px);
 }
 
-.text-placeholder {
+#section-1-background {
+    background-image: url('../img/helicopter.JPG');
+    background-position: 8%;
+}
+
+.foreground {
+    display: grid;
+    grid-template-areas:
+        "text";
+    /* margin-top: auto; */
+    /* margin-bottom: 50px; */
+    transform-origin: 0;
+    transform: translateZ(3px);
+}
+
+.foreground-text-container {
     grid-area: text;
     display: grid;
     grid-template-areas: 
@@ -78,7 +102,7 @@ body, html {
     width: 100%;
 }
 
-#text-1 {
+#foreground-text-container-1 {
     grid-template-rows: 65% 35%;
     height: 100%;
     position: relative;
@@ -86,13 +110,13 @@ body, html {
 }
 
 @media only screen and (max-width: 375px) {
-    #text-1 {
+    #foreground-text-container-1 {
         top: -55px;
     }
 }
 
 @media only screen and (max-width: 320px) {
-    #text-1 {
+    #foreground-text-container-1 {
         top: -25px;
     }
 

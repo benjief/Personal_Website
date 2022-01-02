@@ -1,0 +1,43 @@
+.parallax-container {
+    display: grid;
+    grid-template: "container";
+    position: absolute;
+    top: 0;
+    place-items: center;
+    place-content: center;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    perspective: 8px;
+    perspective-origin: 0%;
+  }
+
+  .parallax-container > * {
+      grid-area: container;
+  }
+  
+.background {
+    width: 100%;
+    height: 100%;
+    transform: translateZ(0px);
+  }
+  
+.foreground {
+  z-index: 1;
+    /* margin-top: auto;
+    margin-bottom: 50px;
+    transform-origin: 0;
+    transform: translateZ(3px); */
+  }
+  
+.foreground h1 {
+    font-size: 36px;
+  }
+
+.background__image {
+    width: 100%;
+    height: 100%;
+    background-repeat: none;
+    background-size: cover;
+}
